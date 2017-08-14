@@ -1,0 +1,115 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+            body{
+                width:100%;
+                height:100%;
+                margin:0 auto;
+                overflow-x:hidden;
+            }
+
+            *{
+                box-sizing:border-box;
+            }
+
+            /* header 부분 */
+            header{
+                width:100%;
+                height:4rem;
+                background-color:#2c6aa0;
+            }
+
+            header #logo{
+                display:inline-block;
+                vertical-align:top;
+                margin-left:2rem;
+            }
+
+            header h1{
+                color:white;
+                display:inline-block;
+                vertical-align: top;
+                font-size:1.2rem;
+                font-family: 'Montserrat';
+                letter-spacing: 0.5px;
+                margin-left:0.3rem;
+                margin-top:1.2rem;
+            }
+
+            /* section 부분 */
+            section, section *{
+                text-align: center;
+            }
+
+            section #grayBox{
+                width:100%;
+                height:3rem;
+                background-color:#F1F1F1;
+            }
+
+            section h1{
+                color:#2679b5;
+                font-family:'Montserrat';
+                font-weight:normal;
+                font-size:1.7rem;
+                margin-top:6rem;
+            }
+
+            section #coverBox{
+                width:50rem;
+                height:24rem;
+                border-radius:4px;
+                background-color:#f2f2f2;
+                margin:0 auto;
+            }
+
+            section label{
+                font-size:1.05rem;
+                letter-spacing: 0.5px;
+                font-family:'Montserrat';
+                font-weight:bold;
+                color:#545454;
+                display:inline-block;
+            }
+
+            section label#typeLabel{
+                margin-left:1.1rem;
+                margin-top:7rem;
+            }
+
+            section .showText{
+                width:27.5rem;
+                height:2.65rem;
+                font-size:1rem;
+                border:0;
+                margin-top:1rem;
+                border-radius:2px;
+                margin-left:1rem;
+            }
+
+            section #convertBtn{
+                width:7rem;
+                height:2.5rem;
+                background-color:#E59729;
+                margin:0 auto;
+                display:table;
+                border-radius: 4px;
+                margin-top:2rem;
+                cursor:pointer;
+            }
+
+            section #convertBtn #convertBtnText{
+                color:white;
+                font-family:'Noto Sans KR';
+                display:table-cell;
+                vertical-align:middle;
+                letter-spacing: 1px;
+                font-size:1.05rem;
+            }
+
+            /* footer 부분 */
+            footer{
+                width:100%;
+                height:9rem;
+                background-color:#505050;
+                margin-top:8rem;
+            }
