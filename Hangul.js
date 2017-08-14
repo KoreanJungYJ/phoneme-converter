@@ -40,6 +40,11 @@ function operating(){
     let comparedVal = typeText.value;
     let uniVal, saveStr;
 
+    /* 16진수 변환 후 출력 */
+    function toHex(val){
+        return ": " + "0x" + Number(val).toString(16).toUpperCase();
+    }
+
     for(let cnt = 0; cnt < comparedVal.length; cnt++){
         uniVal = comparedVal.charCodeAt(cnt) - 0xAC00;
         saveStr = new Array();
@@ -50,16 +55,27 @@ function operating(){
         jung = (( uniVal - jong ) / 28 ) % 21;
         cho  = ((( uniVal - jong ) / 28 ) - jung ) / 21;
         
-        saveStr.push(choSung[cho], jungSung[jung]);
+                                                                /*  - 기본 코드
+                                                                saveStr.push(choSung[cho], jungSung[jung]);
 
+                                                                if(jongSung[jong] !== ""){
+                                                                    saveStr.push(jongSung[jong]);
+                                                                }
+
+                                                                convertedText.value += saveStr + ",";
+                                                                */
+        convertedText.value += choSung[cho] + toHex(cho) + "\n"
+                            + jungSung[jung] + toHex(jung) + "\n";
+                            
         if(jongSung[jong] !== ""){
-            saveStr.push(jongSung[jong]);
+            convertedText.value += jongSung[jong] + toHex(jong) + "\n";
         }
 
-        convertedText.value += saveStr + ",";
+        
     }
 
-    /* 마지막 콤마 분리 */
-    convertedText.value = convertedText.value.slice(0, -1);
+                                                                /* 마지막 콤마 분리 - 기본 코드
+                                                                convertedText.value = convertedText.value.slice(0, -1);
+                                                                */
     
 }
