@@ -42,7 +42,7 @@ function operating(){
 
     /* 16진수 변환 후 출력 */
     function toHex(val){
-        return ": " + "0x" + Number(val).toString(16).toUpperCase();
+        return ": " + "0x" + Number(val).toString(16).toUpperCase() + "\n";
     }
 
     for(let cnt = 0; cnt < comparedVal.length; cnt++){
@@ -64,11 +64,11 @@ function operating(){
 
                                                                 convertedText.value += saveStr + ",";
                                                                 */
-        convertedText.value += choSung[cho] + toHex(cho) + "\n"
-                            + jungSung[jung] + toHex(jung) + "\n";
-                            
+        convertedText.value += choSung[cho] + toHex(cho)
+                            + jungSung[jung] + toHex(jung);
+
         if(jongSung[jong] !== ""){
-            convertedText.value += jongSung[jong] + toHex(jong) + "\n";
+            convertedText.value += jongSung[jong] + toHex(jong);
         }
 
         
